@@ -12,6 +12,7 @@ module.exports = {
         '-1': '-1',
       },
       colors: {
+        dark: '#2e3440',
         'pink': {
           '550': '#EB3ABC'
         }
