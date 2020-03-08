@@ -1,4 +1,6 @@
 const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss')
+require('laravel-mix-purgecss');
 require('@phased/phase')
 
 /*
@@ -12,7 +14,11 @@ require('@phased/phase')
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//     .sass('resources/sass/app.scss', 'public/css');
-
-mix.phase()
+mix
+    .options({
+        processCssUrls: false,
+        postCss: [ tailwindcss('./tailwind.config.js') ],
+    })
+    .copyDirectory('resources/fonts', 'public/fonts')
+    .purgeCss()
+    .phase()

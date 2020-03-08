@@ -1,1 +1,8 @@
-//
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+@font-face {
+    font-family: "againts";
+    src: url("/fonts/againts.otf");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
