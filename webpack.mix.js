@@ -23,5 +23,7 @@ mix
         resolve: { alias: { "@": path.resolve(__dirname, 'resources', 'js') } },
     })
     .copyDirectory('resources/fonts', 'public/fonts')
-    .purgeCss()
+    .purgeCss({
+        whitelistPatternsChildren: [/^token/, /^pre/, /^code/]
+    })
     .phase()
