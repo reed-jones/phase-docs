@@ -13,7 +13,7 @@
       "APP_ENV": "production",
       "APP_KEY": "@app-key",
       "APP_DEBUG": "false",
-      "APP_URL": "https://example.com",
+      "APP_URL": "https://phase.now.sh",
 
       "APP_CONFIG_CACHE": "/tmp/config.php",
       "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -24,6 +24,8 @@
       "CACHE_DRIVER": "array",
       "LOG_CHANNEL": "stderr",
       "SESSION_DRIVER": "array",
-      "VIEW_COMPILED_PATH": "/tmp"
+      "VIEW_COMPILED_PATH": "/tmp/views",
+      "SSR_TEMP_PATH": "/tmp/ssr",
+      "NODE_PATH": "node"
     }
   }
