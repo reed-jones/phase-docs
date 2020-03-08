@@ -3,6 +3,15 @@
     font-family: "againts";
     src: url("/fonts/againts.otf");
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@responsive {
+    .text-shadow-md {
+        text-shadow: 0 5px 15px #FAED27, 0 2px 5px rgba(255,0,0,0.5);
+    }
+    .text-shadow-lg {
+        text-shadow: 0 15px 30px #FAED27, 0 5px 15px rgba(255,0,0,1), 0 20px 60px rgba(0,255,0,1);
+    }
+}

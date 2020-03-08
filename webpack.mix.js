@@ -19,6 +19,9 @@ mix
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ],
     })
+    .webpackConfig({
+        resolve: { alias: { "@": path.resolve(__dirname, 'resources', 'js') } },
+    })
     .copyDirectory('resources/fonts', 'public/fonts')
     .purgeCss()
     .phase()

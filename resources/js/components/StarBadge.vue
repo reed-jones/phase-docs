@@ -1,0 +1,99 @@
+<template>
+    <div class="star-badge-wrapper">
+        <div class="star-badge">
+            <div class="star-badge__inner">
+                <p>
+                    <span class="star-badge__text--big">{{ tag }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    props: ['tag']
+};
+</script>
+
+<style lang="scss" scoped>
+.star-badge-wrapper {
+    @apply opacity-0;
+    animation: fadeInOut 1.4s ease-out 0s infinite normal;
+}
+
+.star-badge {
+    @apply opacity-100 my-12 mx-auto;
+    animation: showBadge 0.6s ease-out 0s 1 normal forwards;
+}
+
+.star-badge,
+.star-badge__inner {
+    @apply relative align-middle table w-24 h-24;
+}
+
+.star-badge__inner p {
+    @apply relative transform -rotate-22-5 align-middle table-cell z-10;
+}
+
+.star-badge:after,
+.star-badge:before,
+.star-badge__inner:after,
+.star-badge__inner:before {
+    content: "";
+    @apply top-0 left-0 absolute h-full w-full block bg-red-500;
+}
+
+.star-badge:before {
+    @apply transform -rotate-22-5;
+}
+
+.star-badge__inner:before {
+    @apply transform rotate-0;
+}
+
+.star-badge:after {
+    @apply transform rotate-22-5;
+}
+
+.star-badge__inner:after {
+    @apply transform rotate-45;
+}
+
+.star-badge__text--big,
+.star-badge__text--small {
+    @apply block w-full text-center font-bold text-white leading-none;
+}
+
+.star-badge__text--big {
+    @apply text-3xl;
+}
+
+@keyframes showBadge {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+    80% {
+        transform: scale(0.6) rotate(-1440deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+</style>
