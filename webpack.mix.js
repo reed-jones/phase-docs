@@ -24,6 +24,7 @@ mix
     })
     .copyDirectory('resources/fonts', 'public/fonts')
     .purgeCss({
+        whitelist: ["html", "body", "em", "strong", "ul", "li", "h1", "h2", "h3", "h4", "h5", "h6"],
         whitelistPatternsChildren: [/^token/, /^pre/, /^code/]
     })
     .phase()

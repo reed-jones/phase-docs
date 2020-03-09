@@ -1,0 +1,26 @@
+.changelog {
+  @apply text-sm;
+  h2 {
+    @apply text-2xl mb-2;
+  }
+  h3 {
+    @apply text-xl mt-4;
+  }
+  ul {
+    @apply list-disc;
+  }
+  a {
+    @apply underline;
+  }
+  code:not([class*="language-"]) {
+    @apply bg-dark text-gray-400 rounded px-2;
+  }
+  strong {
+    @apply font-bold;
+  }
+
+  em > strong,
+  strong > em {
+      @apply text-red-600 underline;
+  }
+}

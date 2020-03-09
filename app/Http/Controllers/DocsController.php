@@ -18,4 +18,9 @@ class DocsController extends Controller
 
         return Phase::view();
     }
+
+    public function DocumentationHandler()
+    {
+        return Phase::view();
+    }
 }

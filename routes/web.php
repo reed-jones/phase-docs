@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::phase('/', 'DocsController@LandingPage');
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::phase('/docs/master/getting-started', 'DocsController@DocumentationHandler');

@@ -24,7 +24,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Inter', 'Arial', 'sans-serif'],
-        'display': ['againts', 'Arial', 'sans-serif']
+        'display': ['againts', 'Inter', 'Arial', 'sans-serif']
       }
     }
   },
