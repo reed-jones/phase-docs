@@ -1,8 +1,6 @@
-import releases from './releases'
-import docs from './docs'
-
 const freshState = () => ({
-  //
+    active: null,
+    sections: [],
 });
 
 const getters = {
@@ -26,9 +24,5 @@ export default {
   state: freshState(),
   getters,
   mutations,
-    actions,
-    modules: {
-      releases,
-      docs
-  }
+  actions
 };
