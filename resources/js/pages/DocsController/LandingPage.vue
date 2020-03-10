@@ -38,18 +38,18 @@
             >Introducing Phase, a collection of glue code, helper functions, and attempted automation so that you can build your Laravel-backed Vue.js Single Page App easier than ever.</div>
         </div>
 
-        <div class="flex flex-wrap justify-center max-w-4xl mx-auto">
-            <div class="w-full flex justify-end mb-4 md:mb-4 px-2 transform md:-skew-y-3 md:skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl" language="php">{{ phpExample }}</Prism>
+        <div class="flex flex-wrap justify-center max-w-4xl mx-auto my-4">
+            <div class="w-full flex justify-end mb-4 md:mb-4 px-4 transform md:-skew-y-3 md:skew-x-3">
+              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="php">{{ phpExample }}</Prism>
             </div>
-            <div class="w-full flex max-w-4xl justify-start px-2 transform md:skew-y-3 md:-skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl" language="html">{{ vueExample }}</Prism>
+            <div class="w-full flex max-w-4xl justify-start px-4 transform md:skew-y-3 md:-skew-x-3">
+              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ vueExample }}</Prism>
             </div>
         </div>
 
         <div class="flex justify-center w-full">
             <div
-                class="bg-gray-300 text-dark m-4 md:m-16 w-full max-w-4xl rounded-lg shadow-2xl px-4 md:px-16 py-4 md:py-12 "
+                class="bg-gray-300 text-dark m-4 md:mx-16 md:my-12 w-full max-w-4xl rounded-lg shadow-2xl px-4 md:px-16 py-4 md:py-12 "
             >
                 <h2 class="text-2xl mb-2 mx-4 md:mx-0">Changelog</h2>
                 <div class="flex mb-2">
