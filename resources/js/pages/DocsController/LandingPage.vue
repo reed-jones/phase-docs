@@ -39,11 +39,21 @@
         </div>
 
         <div class="flex flex-wrap justify-center max-w-4xl mx-auto my-4">
-            <div class="w-full flex justify-end mb-4 md:mb-4 px-4 transform md:-skew-y-3 md:skew-x-3">
+            <div class="w-full flex justify-end mb-4 px-4 transform md:-skew-y-3 md:skew-x-3">
+              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="php">{{ phpRoutesExample }}</Prism>
+            </div>
+            <div class="w-full flex max-w-4xl justify-start mb-4 px-4 transform md:skew-y-3 md:-skew-x-3">
+              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ vueRouterLinkExample }}</Prism>
+            </div>
+
+            <div class="w-full flex justify-end mb-4 px-4 transform md:-skew-y-3 md:skew-x-3">
               <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="php">{{ phpExample }}</Prism>
             </div>
-            <div class="w-full flex max-w-4xl justify-start px-4 transform md:skew-y-3 md:-skew-x-3">
+            <div class="w-full flex max-w-4xl justify-start mb-4 px-4 transform md:skew-y-3 md:-skew-x-3">
               <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ vueExample }}</Prism>
+            </div>
+            <div class="w-full flex justify-end  px-4 transform md:-skew-y-3 md:skew-x-3">
+              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ ssrExample }}</Prism>
             </div>
         </div>
 
@@ -84,7 +94,7 @@ export default {
     },
 
     data: () => ({
-        phpExample: `// From the Controller
+        phpExample: `// Load data from the Controller
 public function LandingPage() {
   Vuex::state([
     'project' => 'Phase',
@@ -94,7 +104,7 @@ public function LandingPage() {
 
   return Phase::view();
 }`,
-        vueExample: `<!-- Straight to the .Vue -->
+        vueExample: `<!-- And access from the .Vue -->
 <div>
   <a :href="\`//github.com/\${$store.state.repo}\`">
     <h1>{{ $store.state.project }}</h1>
@@ -102,6 +112,29 @@ public function LandingPage() {
     <h3>github: {{ $store.state.repo }}</h3>
   </a>
 </div>`,
+        ssrExample: `<!-- Fully Server Rendered -->
+<div>
+  <a href="/github.com/reed-jones/phase">
+    <h1>Phase</h1>
+    <h2>Reed Jones <reedjones@reedjones.com></h2>
+    <h3>github: reed-jones/phase</h3>
+  </a>
+</div>`,
+      phpRoutesExample: `// Define your routes/web.php
+Route::phase('/', 'HomeController@HomePage');
+Route::phase('/about', 'HomeController@AboutPage');
+`,
+      vueRouterLinkExample: `<!-- And navigate there! -->
+<RouterLink to="/">
+  Go Home
+</RouterLink>
+
+<RouterLink :to="{ name: 'HomeController@AboutPage' }">
+  About
+</RouterLink>
+`
+
+
     })
 };
 </script>

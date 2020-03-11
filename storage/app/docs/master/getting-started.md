@@ -15,7 +15,7 @@ In addition, you will need to install Vue, Vuex (for state management), Vue Rout
 npm install axios vue vuex vue-router
 ```
 
-`Vuex` is the official state management library provided by Vue. More information on this can be found here: https://vuex.vuejs.org/ . and `Vue Router` is the official router for building Single Page Apps (SPA) using Vue. https://router.vuejs.org/ . Some knowledge of these tools will likely help when trying to understanding what Phase is doing, however is not at all a pre-requisite for building fast, easy to use SPA's.
+`Vuex` is the official state management library provided by Vue. More information on this can be found here: [Vuex Documentation](https://vuex.vuejs.org/) . and `Vue Router` is the official router for building Single Page Apps (SPA) using Vue. [Vue Router Documentation](https://router.vuejs.org/) . Some knowledge of these tools will likely help when trying to understanding what Phase is doing, however is not at all a pre-requisite for building fast, easy to use SPA's.
 
 ### [#](#client-side-configuration)Client Side Configuration
 
