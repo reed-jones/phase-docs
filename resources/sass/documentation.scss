@@ -44,8 +44,6 @@
     pre {
         @apply my-12 rounded shadow-2xl max-w-full;
         > code {
-            // display: table;
-            // table-layout:fixed;
             width: 100%;
             overflow: auto;
         }
