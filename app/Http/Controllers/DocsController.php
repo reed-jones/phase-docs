@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Apis\Github;
-use Illuminate\Http\Request;
+use App\Section;
+use App\Version;
 use Phased\Routing\Facades\Phase;
 use Phased\State\Facades\Vuex;
-use ReedJones\ApiBuilder\Examples\Github as ApiBuilderGithub;
 
 class DocsController extends Controller
 {
@@ -19,8 +19,36 @@ class DocsController extends Controller
         return Phase::view();
     }
 
-    public function DocumentationHandler()
+    public function DocumentationHandler($versionTag, $sectionSlug = null)
     {
+        if (!$sectionSlug) {
+            return redirect("/docs/master/$versionTag");
+        }
+
+        $version = Version::byTag($versionTag)->first();
+
+        if (!$version) {
+            return abort(404);
+        }
+
+        $section = Section::query()
+            ->where([
+                'version_id' => $version->id,
+                'slug' => $sectionSlug
+            ])
+            ->first();
+
+        if (!$section || !$section->hasContent()) {
+            return abort(404);
+        }
+
+        Vuex::module('phase/docs', [
+            'active' => $section->append('content'),
+            'sections' => Section::with('version')->get()->groupBy('version.branch'),
+            // 'sections' => Section::with('version')->get(),
+            'versions' => Version::all()
+        ]);
+
         return Phase::view();
     }
 }

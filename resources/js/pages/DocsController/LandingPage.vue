@@ -20,7 +20,7 @@
             <img class="h-10 mr-4" src="../../../assets/Github-Mark/PNG/GitHub-Mark-64px.png" />
               </a>
               <RouterLink
-                :to="{ name: 'DocsController@DocumentationHandler' }"
+                :to="{ name: 'DocsController@DocumentationHandler', params: { version: 'master', section: 'getting-started'} }"
                 v-slot="{ href, navigate }"
               >
             <a
@@ -70,7 +70,6 @@
 import StarBadge from "@/components/StarBadge";
 import marked from "marked";
 import Prism from 'vue-prism-component'
-
 
 export default {
     components: {
