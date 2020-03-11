@@ -71,7 +71,6 @@ import StarBadge from "@/components/StarBadge";
 import marked from "marked";
 import Prism from 'vue-prism-component'
 
-
 export default {
     components: {
         StarBadge,

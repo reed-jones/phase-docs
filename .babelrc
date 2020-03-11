@@ -3,7 +3,7 @@
     [
       "prismjs",
       {
-        "languages": ["javascript", "css", "php"],
+        "languages": ["javascript", "css", "scss", "json", "php", "diff", "bash"],
         "css": true
       }
     ]
