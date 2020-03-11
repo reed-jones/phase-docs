@@ -12,7 +12,7 @@
       "APP_NAME": "Phase Documentation",
       "APP_ENV": "production",
       "APP_KEY": "@app-key",
-      "APP_DEBUG": "true",
+      "APP_DEBUG": "false",
       "APP_URL": "https://phased.dev",
 
       "APP_CONFIG_CACHE": "/tmp/config.php",

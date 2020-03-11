@@ -14,13 +14,13 @@ class Section extends Model
     protected $rows = [
         [
             'version_id' => 1,
-            'slug' => 'what-is-phase',
-            'title' => 'What Is Phase'
+            'slug' => 'getting-started',
+            'title' => 'Getting Started'
         ],
         [
             'version_id' => 1,
-            'slug' => 'getting-started',
-            'title' => 'Getting Started'
+            'slug' => 'what-is-phase',
+            'title' => 'What Is Phase'
         ],
         [
             'version_id' => 1,
