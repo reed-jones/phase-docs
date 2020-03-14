@@ -41,7 +41,12 @@ mix
   .webpackConfig(webpack => {
     // console.log(webpack)
     return {
-      resolve: { alias: { "@": path.resolve(__dirname, "resources", "js") } }
+      resolve: {
+        alias: {
+          "@": path.resolve(__dirname, "resources", "js"),
+          "~assets": path.resolve(__dirname, "resources", "assets")
+        }
+      }
     };
   })
   .copyDirectory("resources/fonts", "public/fonts")
