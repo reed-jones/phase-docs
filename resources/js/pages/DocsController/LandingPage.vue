@@ -114,7 +114,7 @@ public function LandingPage() {
 </div>`,
         ssrExample: `<!-- Fully Server Rendered -->
 <div>
-  <a href="/github.com/reed-jones/phase">
+  <a href="//github.com/reed-jones/phase">
     <h1>Phase</h1>
     <h2>Reed Jones <reedjones@reedjones.com></h2>
     <h3>github: reed-jones/phase</h3>
@@ -133,8 +133,6 @@ Route::phase('/about', 'HomeController@AboutPage');
   About
 </RouterLink>
 `
-
-
     })
 };
 </script>
