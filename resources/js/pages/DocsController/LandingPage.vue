@@ -17,7 +17,7 @@
             </div>
             <div class="absolute top-0 right-0 flex p-4 z-10">
               <a href="//github.com/reed-jones/phase">
-            <img class="h-10 mr-4" src="../../../assets/Github-Mark/PNG/GitHub-Mark-64px.png" />
+            <img class="h-10 mr-4" src="/images/GitHub-Mark-64px.png" />
               </a>
               <RouterLink
                 :to="{ name: 'DocsController@DocumentationHandler', params: { version: 'master', section: 'getting-started'} }"
@@ -114,7 +114,7 @@ public function LandingPage() {
 </div>`,
         ssrExample: `<!-- Fully Server Rendered -->
 <div>
-  <a href="/github.com/reed-jones/phase">
+  <a href="//github.com/reed-jones/phase">
     <h1>Phase</h1>
     <h2>Reed Jones <reedjones@reedjones.com></h2>
     <h3>github: reed-jones/phase</h3>
@@ -133,8 +133,6 @@ Route::phase('/about', 'HomeController@AboutPage');
   About
 </RouterLink>
 `
-
-
     })
 };
 </script>
