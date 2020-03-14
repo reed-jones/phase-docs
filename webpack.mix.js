@@ -39,7 +39,6 @@ mix
     postCss: [tailwindcss("./tailwind.config.js")]
   })
   .webpackConfig(webpack => {
-    // console.log(webpack)
     return {
       resolve: {
         alias: {
