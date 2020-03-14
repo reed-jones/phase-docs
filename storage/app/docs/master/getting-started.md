@@ -83,10 +83,38 @@ import PhaseRoutes from '@phased/phase/routes'
 
 Vue.use(VueRouter)
 
-const routes = new VueRouter({
+const router = new VueRouter({
     mode: 'history',
     routes: PhaseRoutes
 })
+```
+
+### [#](#app-setup) App Setup
+Assuming you have followed along with [Vuex](#vuex) & [Vue Router](#vue-router) setup, you now have a `store` a `router` objects. Phase requires the base app to be written in `resources/js/app.js` and export the app instead of mounting it directly as you may be used to. This deviation allows Phase to handle enabling or disabling SSR. In your vue config you must also supply a render function pointing to the entry `.vue` file.
+```js
+// app.js
+import App from './App.vue'
+// store, and router previously declared
+export default new Vue({
+    store,
+    router
+    render: h => h(App)
+})
+```
+`App.vue` can be anything you like, however for the vue-router to work, you need to include a `<RouterView />` component. This is where each 'page' is rendered.
+```html
+<template>
+    <div>
+        <!--
+            This is outside of the RouterView and
+            therefore is persistent between page changes
+        -->
+        <StaticNavbar />
+
+        <!-- This is where each page will be rendered -->
+        <RouterView />
+    </div>
+</template>
 ```
 
 ### [#](#server-side-configuration)Server Side Configuration

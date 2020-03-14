@@ -34,11 +34,6 @@ class Section extends Model
         ],
         [
             'version_id' => 1,
-            'slug' => 'module-loaders',
-            'title' => 'Module Loaders'
-        ],
-        [
-            'version_id' => 1,
             'slug' => 'server-side-rendering',
             'title' => 'Server Side Rendering'
         ]
