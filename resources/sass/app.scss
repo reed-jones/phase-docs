@@ -1,17 +1,12 @@
+@use 'prism-okaidia';
+@use 'tailwindcss/base';
+@use 'preflight';
 
-@use './starBadge';
-@use './prism-okaidia';
-@use './changelog';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
 
-@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
-@font-face {
-    font-family: "againts";
-    src: url("/fonts/againts.otf");
-}
+@use 'starBadge';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @responsive {
     .text-shadow-md {
@@ -20,8 +15,4 @@
     .text-shadow-lg {
         text-shadow: 0 15px 30px #FAED27, 0 5px 15px rgba(255,0,0,1), 0 20px 60px rgba(0,255,0,1);
     }
-}
-
-body {
-    @apply bg-purple-800 min-h-screen font-sans;
 }

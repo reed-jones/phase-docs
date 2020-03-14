@@ -13,7 +13,7 @@
       "APP_ENV": "production",
       "APP_KEY": "@app-key",
       "APP_DEBUG": "false",
-      "APP_URL": "https://phase.now.sh",
+      "APP_URL": "https://phased.dev",
 
       "APP_CONFIG_CACHE": "/tmp/config.php",
       "APP_EVENTS_CACHE": "/tmp/events.php",

@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::phase('/', 'DocsController@LandingPage');
-Route::phase('/docs/master/getting-started', 'DocsController@DocumentationHandler');
+Route::redirect('/docs', '/docs/master/getting-started');
+Route::phase('/docs/{version}/{section?}', 'DocsController@DocumentationHandler');

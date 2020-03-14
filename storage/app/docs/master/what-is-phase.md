@@ -1,0 +1,3 @@
+# What is Phase
+
+Phase aims to integrate Laravel, Vuex, & Vue Router as seamlessly as possible. All `phase` routes specified in your `routes/web.php` are automatically configured for slick SPA navigation. All configured api calls will automatically be committed into your vuex store. Data loaded through your view controllers is immediately available in the vuex store. No waiting for separate api calls, No mutation boilerplate: `state.count = count`. No chance of your vue-router configuration getting out of sync with your web routes. No reason to give up the nice Route -> Controller -> Page view flow.
