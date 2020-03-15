@@ -3,5 +3,8 @@
 <title>{{ config('app.name') }}</title>
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="theme-color" content="#4299e1">
+<link rel="canonical" href="https://phased.dev" />
 <meta name="Description" content="Phase - A blazing fastish Server Rendered Vue/Laravel integration meta framework.">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Inter&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
