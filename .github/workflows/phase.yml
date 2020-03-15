@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run prod
-    # - uses: stefanzweifel/git-auto-commit-action@v4.1.1
-    #   with:
-    #     commit_message: Save Production Build
-    #     branch: ${{ github.head_ref }}
+    - uses: stefanzweifel/git-auto-commit-action@v4.1.1
+      with:
+        commit_message: Save Production Build
+        branch: ${{ github.head_ref }}
