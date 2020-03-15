@@ -3,38 +3,37 @@ const tailwindcss = require("tailwindcss");
 require("laravel-mix-purgecss");
 require("@phased/phase");
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
-// Mix.listen("configReady", function(config) {
-//   const rules = config.module.rules;
+const readPhaseRc = file => {
+  if (process.env.NODE_ENV !== 'production') {
+    return null
+  }
 
-//   for (let rule of rules) {
-//     if (rule.use && Array.isArray(rule.use)) {
-//       for (let use of rule.use) {
-//         if (use.loader === "style-loader") {
-//           use.loader = "vue-style-loader";
-//         }
-//       }
-//     }
-//     for (let loader in rule.loaders) {
-//       if (rule.loaders[loader] === "style-loader") {
-//         rule.loaders[loader] = "vue-style-loader";
-//       }
-//     }
-//   }
-//     config.module.rules = rules
-// });
-let phpConfig;
-if (true) {
-  phpConfig = require('./.phaserc.json')
+  const fs = require('fs')
+  try {
+    return  fs.existsSync(file) && JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+const writePhaseRc = file => {
+  try {
+
+    const fs = require('fs')
+    const phaseRc = JSON.parse(
+      require("child_process").execSync('php artisan phase:routes --json --config').toString()
+    )
+    if (!phaseRc || !phaseRc.config) {
+      return null;
+    }
+
+    const { resources, public, ...assets } = phaseRc.config.assets
+
+    fs.writeFileSync(file, JSON.stringify({
+      config: { ...phaseRc.config, assets },
+      routes: phaseRc.routes
+    }));
+  } catch { }
 }
 
 mix
@@ -72,5 +71,8 @@ mix
   })
   .phase({
     codeSplit: false,
-    phpConfig
-  });
+
+    // In prod attempt to read cached config (no 'php' in path)
+    phpConfig: readPhaseRc('.phaserc')
+  })
+  .then(() => { writePhaseRc('.phaserc') });
