@@ -32,6 +32,13 @@ require("@phased/phase");
 //   }
 //     config.module.rules = rules
 // });
+let phpConfig;
+if (true) {
+  const execSync = require("child_process");
+  const PHP_PKG = path.dirname(require.resolve('@now-php/lib-73/package.json'));
+  const PHP_BIN_DIR = path.join(PHP_PKG, "native/php");
+  phpConfig = JSON.parse(execSync(`${PHP_BIN_DIR} artisan ${cmd}`).toString())
+}
 
 mix
   .options({
@@ -67,5 +74,6 @@ mix
     whitelistPatternsChildren: [/^token/, /^pre/, /^code/]
   })
   .phase({
-    codeSplit: false
+    codeSplit: false,
+    phpConfig
   });
