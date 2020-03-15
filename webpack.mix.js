@@ -17,12 +17,16 @@ const readPhaseRc = file => {
 }
 
 const writePhaseRc = file => {
+  if (process.env.NODE_ENV === 'production') {
+    return null
+  }
   try {
 
     const fs = require('fs')
     const phaseRc = JSON.parse(
       require("child_process").execSync('php artisan phase:routes --json --config').toString()
     )
+
     if (!phaseRc || !phaseRc.config) {
       return null;
     }
@@ -33,7 +37,9 @@ const writePhaseRc = file => {
       config: { ...phaseRc.config, assets },
       routes: phaseRc.routes
     }));
-  } catch { }
+  } catch {
+    return null
+  }
 }
 
 mix
