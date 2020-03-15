@@ -66,4 +66,6 @@ mix
     ],
     whitelistPatternsChildren: [/^token/, /^pre/, /^code/]
   })
-  .phase();
+  .phase({
+    codeSplit: false
+  });

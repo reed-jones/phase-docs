@@ -15,7 +15,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "phased/phase": "^0.3.0",
+        "phased/phase": "^0.4.0",
         "reed-jones/api-builder": "^0.1.0"
     },
     "require-dev": {
