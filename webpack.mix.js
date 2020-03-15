@@ -34,7 +34,7 @@ require("@phased/phase");
 // });
 let phpConfig;
 if (true) {
-  const execSync = require("child_process");
+  const { execSync } = require("child_process");
   const PHP_PKG = path.dirname(require.resolve('@now-php/lib-73/package.json'));
   const PHP_BIN_DIR = path.join(PHP_PKG, "native/php");
   phpConfig = JSON.parse(execSync(`${PHP_BIN_DIR} artisan ${cmd}`).toString())
