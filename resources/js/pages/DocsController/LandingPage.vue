@@ -17,7 +17,7 @@
             </div>
             <div class="absolute top-0 right-0 flex p-4 z-10">
               <a href="//github.com/reed-jones/phase">
-            <img class="h-10 mr-4" src="/images/GitHub-Mark-64px.png" />
+                <img class="h-10 mr-4" src="/images/GitHub-Mark-64px.png" alt="github-logo" />
               </a>
               <RouterLink
                 :to="{ name: 'DocsController@DocumentationHandler', params: { version: 'master', section: 'getting-started'} }"
