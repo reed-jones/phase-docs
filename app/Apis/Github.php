@@ -23,16 +23,18 @@ class Github extends ApiBuilder
     {
         // return $this->get("repos/$repo/releases/{$releaseId}")
         //     ->prepare(fn ($data) => [$data]);
+
+        // Untill a good caching solution is found, this will be hardcoded to avoid rate limiting.
         return collect([static::make(json_decode('{
-            "url": "https://api.github.com/repos/reed-jones/phase/releases/24321907",
-            "assets_url": "https://api.github.com/repos/reed-jones/phase/releases/24321907/assets",
-            "upload_url": "https://uploads.github.com/repos/reed-jones/phase/releases/24321907/assets{?name,label}",
-            "html_url": "https://github.com/reed-jones/phase/releases/tag/v0.3.0",
-            "id": 24321907,
-            "node_id": "MDc6UmVsZWFzZTI0MzIxOTA3",
-            "tag_name": "v0.3.0",
+            "url": "https://api.github.com/repos/reed-jones/phase/releases/24540851",
+            "assets_url": "https://api.github.com/repos/reed-jones/phase/releases/24540851/assets",
+            "upload_url": "https://uploads.github.com/repos/reed-jones/phase/releases/24540851/assets{?name,label}",
+            "html_url": "https://github.com/reed-jones/phase/releases/tag/v0.4.0",
+            "id": 24540851,
+            "node_id": "MDc6UmVsZWFzZTI0NTQwODUx",
+            "tag_name": "v0.4.0",
             "target_commitish": "master",
-            "name": "v0.3.0",
+            "name": "v0.4.0",
             "draft": false,
             "author": {
               "login": "reed-jones",
@@ -55,14 +57,14 @@ class Github extends ApiBuilder
               "site_admin": false
             },
             "prerelease": false,
-            "created_at": "2020-03-08T03:25:01Z",
-            "published_at": "2020-03-08T03:31:00Z",
+            "created_at": "2020-03-15T19:00:45Z",
+            "published_at": "2020-03-15T19:19:58Z",
             "assets": [
 
             ],
-            "tarball_url": "https://api.github.com/repos/reed-jones/phase/tarball/v0.3.0",
-            "zipball_url": "https://api.github.com/repos/reed-jones/phase/zipball/v0.3.0",
-            "body": "## [v0.3.0](https://github.com/reed-jones/phase/compare/v0.2.0...v0.3.0) - 2020-03-07\r\n### Added\r\n- Server Side Rendering option available in `config(\'phase.ssr\')` (true/false)\r\n- Client Hydration via `config(\'phase.hydrate\')` (SSR & no JS bundle)\r\n- `NODE_PATH=` env variable has been added and is required for SSR support to operate\r\n- `phased/phase` composer meta package is now available to make installation just that much easier\r\n### Changed\r\n- _**Breaking**_ main vue app should now `export default new Vue` and not mount the app (no `el: \'#app\'`). This allows for SSR to be toggled on/off.\r\n- _**Breaking**_ It is now mandatory & non-configurable that the main entry is `app.js`.\r\n### Removed\r\n- _**Breaking**_ `js` option in assets configuration is no longer used since SSR option has been added, and has been removed. If your js bundle was named something other than `app.js` this is a breaking change.\r\n### Fixed\r\n- `@phased/state` no longer relies on `window` making it usable for other environments (primarily SSR, potentially NativeScript-vue)\r\n\r\n"
+            "tarball_url": "https://api.github.com/repos/reed-jones/phase/tarball/v0.4.0",
+            "zipball_url": "https://api.github.com/repos/reed-jones/phase/zipball/v0.4.0",
+            "body": "## [v0.4.0](https://github.com/reed-jones/phase/compare/v0.3.0...v0.4.0) - 2020-03-15\r\n### Added\r\n- Now follows any axios redirects (with page transition, enabled by default)\r\n- Customizable `<head>` section (meta tags, etc) using optional `parts/head.blade.php`\r\n- Route code splitting now available using the option `codeSplit: true` in `webpack.mix.js`\r\n\r\n### Changed\r\n- All automated ajax requests append `phase=true` to the query string.\r\n\r\n### Fixed\r\n- After using vue-router, then navigating to an external site, pressing \'back\' no longer displays json"
           }', true))]);
     }
 

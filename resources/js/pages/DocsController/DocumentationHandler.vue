@@ -42,6 +42,7 @@
         </div>
         <div class="documentation p-4">
             <div v-html="content" />
+            <a :href="editLink">Edit This Page</a>
         </div>
     </div>
 </template>
@@ -51,13 +52,19 @@ import marked from "marked";
 
 export default {
     async beforeRouteUpdate(to, from, next) {
-        await axios.get(to.fullPath);
+        await axios.get(to.fullPath, { params: { phase: true }});
         next();
     },
 
     computed: {
         content() {
             return marked(this.$store.state.phase.docs.active.content);
+        },
+        editLink() {
+            const repo = this.$store.state.repo
+            const version = this.$store.state.phase.docs.active.version.branch
+            const slug = this.$store.state.phase.docs.active.slug
+            return `https://github.com/${repo}-docs/edit/master/storage/app/docs/${version}/${slug}.md`
         }
     },
 

@@ -1,6 +1,7 @@
 const freshState = () => ({
     active: null,
     sections: [],
+    versions: []
 });
 
 const getters = {

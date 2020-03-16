@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6272ea3191a6e7c155f84ed144d46f0",
+    "content-hash": "eb477c5d9eaa4643640b174e7d0adc76",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -432,16 +432,16 @@
         },
         {
             "name": "fruitcake/laravel-cors",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fruitcake/laravel-cors.git",
-                "reference": "138ad34ba5f578283e94c5614f6c48a10bc3ac6a"
+                "reference": "0e0500133dbb6325266133dd72f040617c9cdbd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruitcake/laravel-cors/zipball/138ad34ba5f578283e94c5614f6c48a10bc3ac6a",
-                "reference": "138ad34ba5f578283e94c5614f6c48a10bc3ac6a",
+                "url": "https://api.github.com/repos/fruitcake/laravel-cors/zipball/0e0500133dbb6325266133dd72f040617c9cdbd0",
+                "reference": "0e0500133dbb6325266133dd72f040617c9cdbd0",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +496,7 @@
                 "crossdomain",
                 "laravel"
             ],
-            "time": "2020-02-21T13:24:15+00:00"
+            "time": "2020-03-11T21:05:07+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -823,16 +823,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.1.0",
+            "version": "v7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "59b97d2868ff42d11626e63c6773b41146b3eb9c"
+                "reference": "42b311862adfc36b8628ac62d226a3682f463439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/59b97d2868ff42d11626e63c6773b41146b3eb9c",
-                "reference": "59b97d2868ff42d11626e63c6773b41146b3eb9c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/42b311862adfc36b8628ac62d226a3682f463439",
+                "reference": "42b311862adfc36b8628ac62d226a3682f463439",
                 "shasum": ""
             },
             "require": {
@@ -920,7 +920,7 @@
                 "ext-memcached": "Required to use the memcache cache driver.",
                 "ext-pcntl": "Required to use all features of the queue worker.",
                 "ext-posix": "Required to use all features of the queue worker.",
-                "ext-redis": "Required to use the Redis cache and queue drivers.",
+                "ext-redis": "Required to use the Redis cache and queue drivers (^4.0|^5.0).",
                 "filp/whoops": "Required for friendly error pages in development (^2.4).",
                 "fzaninotto/faker": "Required to use the eloquent factory builder (^1.9.1).",
                 "guzzlehttp/guzzle": "Required to use the HTTP Client, Mailgun mail driver and the ping methods on schedules (^6.3.1|^7.0).",
@@ -970,7 +970,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-03-10T14:07:01+00:00"
+            "time": "2020-03-14T14:33:32+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1505,21 +1505,21 @@
         },
         {
             "name": "phased/phase",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-phase-php.git",
-                "reference": "e1924e50c0138c3a8e1c8d1782f6cdeb5aa1c58e"
+                "reference": "a025f0183338cc9906b2c8a4fdc9df28f17de91d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-phase-php/zipball/e1924e50c0138c3a8e1c8d1782f6cdeb5aa1c58e",
-                "reference": "e1924e50c0138c3a8e1c8d1782f6cdeb5aa1c58e",
+                "url": "https://api.github.com/repos/reed-jones/phase-phase-php/zipball/a025f0183338cc9906b2c8a4fdc9df28f17de91d",
+                "reference": "a025f0183338cc9906b2c8a4fdc9df28f17de91d",
                 "shasum": ""
             },
             "require": {
-                "phased/routing": "^0.3",
-                "phased/state": "^0.3",
+                "phased/routing": "^0.4",
+                "phased/state": "^0.4",
                 "php": "^7.2",
                 "spatie/laravel-server-side-rendering": "^1.3"
             },
@@ -1545,20 +1545,20 @@
                 }
             ],
             "description": "Phase meta package",
-            "time": "2020-03-08T03:25:01+00:00"
+            "time": "2020-03-15T19:00:45+00:00"
         },
         {
             "name": "phased/routing",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-routing-php.git",
-                "reference": "7db00ea1c9ecd0e42e6ba18c2ff143ccf5c53cb5"
+                "reference": "ba3b29be7dee58825d13655fb0024e1c2bc142fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-routing-php/zipball/7db00ea1c9ecd0e42e6ba18c2ff143ccf5c53cb5",
-                "reference": "7db00ea1c9ecd0e42e6ba18c2ff143ccf5c53cb5",
+                "url": "https://api.github.com/repos/reed-jones/phase-routing-php/zipball/ba3b29be7dee58825d13655fb0024e1c2bc142fa",
+                "reference": "ba3b29be7dee58825d13655fb0024e1c2bc142fa",
                 "shasum": ""
             },
             "require": {
@@ -1597,11 +1597,11 @@
                 }
             ],
             "description": "Transparent Vue <-> Laravel Integration",
-            "time": "2020-03-07T06:27:52+00:00"
+            "time": "2020-03-15T18:07:34+00:00"
         },
         {
             "name": "phased/state",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-state-php.git",
@@ -2195,16 +2195,16 @@
         },
         {
             "name": "spatie/laravel-server-side-rendering",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-server-side-rendering.git",
-                "reference": "89324f22412e71f0afe29af818a8672d0d8611ba"
+                "reference": "8b05219de718d5488edc0bae670ec0de4db97557"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-server-side-rendering/zipball/89324f22412e71f0afe29af818a8672d0d8611ba",
-                "reference": "89324f22412e71f0afe29af818a8672d0d8611ba",
+                "url": "https://api.github.com/repos/spatie/laravel-server-side-rendering/zipball/8b05219de718d5488edc0bae670ec0de4db97557",
+                "reference": "8b05219de718d5488edc0bae670ec0de4db97557",
                 "shasum": ""
             },
             "require": {
@@ -2254,7 +2254,7 @@
                 "laravel-server-side-rendering",
                 "spatie"
             ],
-            "time": "2020-03-06T17:09:36+00:00"
+            "time": "2020-03-14T11:59:36+00:00"
         },
         {
             "name": "spatie/server-side-rendering",
@@ -3784,16 +3784,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v4.1.1",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "32bd5ca5a4170f88e27073353013d210a3354ae9"
+                "reference": "939dfda2d7267ac8fc53ac3d642b5de357554c39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/32bd5ca5a4170f88e27073353013d210a3354ae9",
-                "reference": "32bd5ca5a4170f88e27073353013d210a3354ae9",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/939dfda2d7267ac8fc53ac3d642b5de357554c39",
+                "reference": "939dfda2d7267ac8fc53ac3d642b5de357554c39",
                 "shasum": ""
             },
             "require": {
@@ -3842,20 +3842,20 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-03-01T23:56:01+00:00"
+            "time": "2020-03-12T13:44:15+00:00"
         },
         {
             "name": "voku/portable-ascii",
-            "version": "1.4.9",
+            "version": "1.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2"
+                "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/9fd2b224c71448b5f84aef9d499a1428d79776a2",
-                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/240e93829a5f985fab0984a6e55ae5e26b78a334",
+                "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334",
                 "shasum": ""
             },
             "require": {
@@ -3891,7 +3891,7 @@
                 "clean",
                 "php"
             ],
-            "time": "2020-03-06T02:47:42+00:00"
+            "time": "2020-03-13T01:23:26+00:00"
         }
     ],
     "packages-dev": [
