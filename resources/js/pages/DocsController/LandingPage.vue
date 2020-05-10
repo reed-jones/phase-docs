@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div dusk="landing-page">
         <div class="mb-8">
             <div class="absolute w-full h-80 bg-pink-550 transform -skew-y-3 shadow-2xl -z-1" />
             <div class="absolute w-full h-80 bg-blue-500 transform skew-y-3 shadow-2xl -z-1" />
@@ -16,7 +16,7 @@
                 >AN EZ PZ SSR PHP VUE SPA ASAP. OMG!</h2>
             </div>
             <div class="absolute top-0 right-0 flex p-4 z-10">
-              <a href="//github.com/reed-jones/phase">
+              <a href="//github.com/reed-jones/phase" dusk="github-link">
                 <img class="h-10 mr-4" src="/images/GitHub-Mark-64px.png" alt="github-logo" />
               </a>
               <RouterLink
@@ -26,7 +26,8 @@
             <a
               :href="href"
               @click="navigate"
-                class="h-10 flex items-center justify-center py-2 px-4 bg-green-300 rounded-lg hover:shadow-2xl cursor-pointer transform hover:scale-110 duration-200"
+              dusk="docs-link"
+              class="docs h-10 flex items-center justify-center py-2 px-4 bg-green-300 rounded-lg hover:shadow-2xl cursor-pointer transform hover:scale-110 duration-200"
             >Docs</a>
               </RouterLink>
             </div>

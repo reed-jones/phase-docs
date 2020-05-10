@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-gray-100 flex items-start justify-start">
+    <div class="min-h-screen bg-gray-100 flex items-start justify-start" :dusk="`docs/${$store.state.phase.docs.active.slug}`">
         <div
             class="w-1/3 flex-grow-0 flex-shrink-0 sticky top-0 text-right border-r-2 border-pink-550 min-h-screen shadow-2xl bg-blue-500 text-dark text-lg py-4"
         >
@@ -26,6 +26,7 @@
                         <a
                             :class="isExactActive ? 'border-pink-550': 'border-transparent'"
                             class="w-full border-b-2 p-4"
+                            :dusk="`sidebar/${section.slug}`"
                             :href="href"
                         >{{ section.title }}</a>
                     </li>

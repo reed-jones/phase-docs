@@ -41,7 +41,7 @@ class Section extends Model
             'version_id' => 1,
             'slug' => 'api',
             'title' => 'API'
-        ]
+        ],
     ];
 
     public function version()

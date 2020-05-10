@@ -21,6 +21,7 @@ class DocsController extends Controller
 
     public function DocumentationHandler($versionTag, $sectionSlug = null)
     {
+        // redirects from `/docs/getting-started` to `/docs/master/getting-started`
         if (!$sectionSlug) {
             return redirect("/docs/master/$versionTag");
         }
