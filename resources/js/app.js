@@ -2,16 +2,22 @@ import './bootstrap'
 
 import Vue from 'vue';
 import App from './App.vue'
-import VueRouter from 'vue-router'
 
+// Vuex Store
 import store from './store'
 
-import PhaseRoutes from '@phased/phase/routes'
-
+// Vue Router
+import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-const routerOptions = { mode: 'history', routes: PhaseRoutes }
+// Phase Routes & Vue Router Options
+import PhaseRoutes from '@phased/phase/routes'
+const routerOptions = {
+    mode: 'history',
+    routes: PhaseRoutes
+}
 
+// Export Phase app for SSR
 export default new Vue({
     store,
     router: new VueRouter(routerOptions),

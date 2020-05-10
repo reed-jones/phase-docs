@@ -27,5 +27,5 @@ jobs:
     - run: npm run prod
     - uses: stefanzweifel/git-auto-commit-action@v4.1.1
       with:
-        commit_message: Save Production Build
+        commit_message: Save Production Build [ci skip]
         branch: ${{ github.head_ref }}

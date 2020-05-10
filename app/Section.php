@@ -41,12 +41,12 @@ class Section extends Model
             'version_id' => 1,
             'slug' => 'api',
             'title' => 'API'
-        ]
+        ],
     ];
 
     public function version()
     {
-        return $this->belongsTo('App\Version');
+        return $this->belongsTo(Version::class);
     }
 
     public function getContentAttribute()
