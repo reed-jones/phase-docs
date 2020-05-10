@@ -14,10 +14,6 @@ class Version extends Model
         [ 'id' => 1, 'branch' => 'master' ]
     ];
 
-    // public function getRows() {
-    //     return $this->data;
-    // }
-
     public function scopeByTag($query, $tag)
     {
         return $query->where('branch', $tag);
@@ -25,6 +21,6 @@ class Version extends Model
 
     public function sections()
     {
-        return $this->hasMany('App\Section');
+        return $this->hasMany(Section::class);
     }
 }

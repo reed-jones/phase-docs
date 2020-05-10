@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div dusk="landing-page">
         <div class="mb-8">
             <div class="absolute w-full h-80 bg-pink-550 transform -skew-y-3 shadow-2xl -z-1" />
             <div class="absolute w-full h-80 bg-blue-500 transform skew-y-3 shadow-2xl -z-1" />
@@ -16,7 +16,7 @@
                 >AN EZ PZ SSR PHP VUE SPA ASAP. OMG!</h2>
             </div>
             <div class="absolute top-0 right-0 flex p-4 z-10">
-              <a href="//github.com/reed-jones/phase">
+              <a href="//github.com/reed-jones/phase" dusk="github-link">
                 <img class="h-10 mr-4" src="/images/GitHub-Mark-64px.png" alt="github-logo" />
               </a>
               <RouterLink
@@ -26,7 +26,8 @@
             <a
               :href="href"
               @click="navigate"
-                class="h-10 flex items-center justify-center py-2 px-4 bg-green-300 rounded-lg hover:shadow-2xl cursor-pointer transform hover:scale-110 duration-200"
+              dusk="docs-link"
+              class="docs h-10 flex items-center justify-center py-2 px-4 bg-green-300 rounded-lg hover:shadow-2xl cursor-pointer transform hover:scale-110 duration-200"
             >Docs</a>
               </RouterLink>
             </div>
@@ -62,13 +63,24 @@
                 class="bg-gray-300 text-dark m-4 md:mx-16 md:my-12 w-full max-w-4xl rounded-lg shadow-2xl px-4 md:px-16 py-4 md:py-12 "
             >
                 <h2 class="text-2xl mb-2 mx-4 md:mx-0">Changelog</h2>
-                <div class="flex mb-2">
-                  <a href="https://www.npmjs.com/package/@phased/phase">
-                    <img class="mr-2" alt="npm (scoped)" src="https://img.shields.io/npm/v/@phased/phase">
+                <div class="flex items-stretch mb-2 h-6">
+
+                  <a href="https://www.npmjs.com/package/@phased/phase" class="shadow-md mr-2 h-full">
+                    <img class="h-full" alt="npm (scoped)" src="https://img.shields.io/npm/v/@phased/phase">
                   </a>
-                  <a href="https://packagist.org/packages/phased/phase">
-                    <img class="mr-2" alt="Packagist Version" src="https://img.shields.io/packagist/v/phased/phase?label=composer">
+
+                  <a href="https://packagist.org/packages/phased/phase" class="mr-2 h-full">
+                    <img class="shadow-md h-full" alt="Packagist Version" src="https://img.shields.io/packagist/v/phased/phase?label=composer">
                   </a>
+
+                  <!--
+                    TODO: this chipper tag is for the phase-docs repo, not the main phase repo as it should be
+                  -->
+                  <!--
+                  <div class="shadow-md mr-2 h-full">
+                    <img class="h-full" alt="Chipper CI" src="https://app.chipperci.com/projects/b4d6dffa-71a2-42f8-8ea2-6c6e86a5511e/status/master">
+                  </div>
+                  -->
                 </div>
                 <div class="changelog px-4 md:px-0" v-html="changelog" />
 
