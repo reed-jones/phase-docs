@@ -40,20 +40,20 @@
 
         <div class="flex flex-wrap justify-center max-w-4xl mx-auto my-4">
             <div class="w-full flex justify-end mb-4 px-4 transform md:-skew-y-3 md:skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="php">{{ phpRoutesExample }}</Prism>
+              <pre class="w-full md:w-2/3 shadow-2xl rounded-lg language-php"><code>{{ phpRoutesExample }}</code></pre>
             </div>
             <div class="w-full flex max-w-4xl justify-start mb-4 px-4 transform md:skew-y-3 md:-skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ vueRouterLinkExample }}</Prism>
+              <pre class="w-full md:w-2/3 shadow-2xl rounded-lg language-html"><code>{{ vueRouterLinkExample }}</code></pre>
             </div>
 
             <div class="w-full flex justify-end mb-4 px-4 transform md:-skew-y-3 md:skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="php">{{ phpExample }}</Prism>
+              <pre class="w-full md:w-2/3 shadow-2xl rounded-lg language-php" language="php"><code class="language-php">{{ phpExample }}</code></pre>
             </div>
             <div class="w-full flex max-w-4xl justify-start mb-4 px-4 transform md:skew-y-3 md:-skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ vueExample }}</Prism>
+              <pre class="w-full md:w-2/3 shadow-2xl rounded-lg language-html" language="html"><code class="language-html">{{ vueExample }}</code></pre>
             </div>
             <div class="w-full flex justify-end  px-4 transform md:-skew-y-3 md:skew-x-3">
-              <Prism class="w-full md:w-2/3 shadow-2xl rounded-lg" language="html">{{ ssrExample }}</Prism>
+              <pre class="w-full md:w-2/3 shadow-2xl rounded-lg language-html"><code>{{ ssrExample }}</code></pre>
             </div>
         </div>
 
@@ -81,18 +81,21 @@
 <script>
 import StarBadge from "@/components/StarBadge";
 import marked from "marked";
-import Prism from 'vue-prism-component'
+import Prism from 'prismjs'
 
 export default {
     components: {
-        StarBadge,
-        Prism
+        StarBadge
     },
 
     computed: {
         changelog() {
             return marked(this.$store.state.phase.releases.latest.body);
         },
+    },
+
+    mounted() {
+        Prism.highlightAll();
     },
 
     data: () => ({

@@ -1,13 +1,13 @@
 <template>
     <div class="min-h-screen bg-gray-100 flex items-start">
         <div
-            class="w-64 flex-shrink-0 sticky top-0 text-right border-r-2 border-pink-550 min-h-screen shadow-2xl mr-8 bg-blue-500 text-dark text-lg py-4"
+            class="w-1/4 max-w-2xl flex-shrink-0 sticky top-0 text-right border-r-2 border-pink-550 min-h-screen shadow-2xl mr-8 bg-blue-500 text-dark text-lg py-4"
         >
             <RouterLink :to="{ name: 'DocsController@LandingPage' }" v-slot="{ href, navigate }">
                 <a
                     :href="href"
                     @click="navigate"
-                    class="flex items-center justify-end text-6xl font-display transform -skew-y-12 text-shadow-lg mx-4 py-4"
+                    class="flex items-center justify-end text-6xl font-display transform -skew-y-12 text-shadow-lg mx-12 pt-12"
                 >Phase</a>
             </RouterLink>
 
@@ -49,6 +49,7 @@
 
 <script>
 import marked from "marked";
+import Prism from 'prismjs'
 
 export default {
     async beforeRouteUpdate(to, from, next) {

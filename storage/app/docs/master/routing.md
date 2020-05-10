@@ -1,7 +1,7 @@
 # Routing
 
 ### [#](#pages) Pages
-Routing of your application starts in your `routes/web.php`. It's from here that your Vue Router configuration is generated. To mark a route as a Phase route, the `Route::phase` method is used.
+As with most Laravel apps, the routing of your application starts in your `routes/web.php`. It's from here that your Vue Router configuration is generated. To mark a route as a Phase route, the `Route::phase` method is used.
 ```php
 Route::phase('/', 'HomeController@HomePage');
 ```
@@ -15,12 +15,15 @@ public function HomePage()
     return Phase::view();
 }
 ```
-Phase follows some conventions in order to get all the routing to stay predictable. All pages will be put in a `pages` directory, and named as `location/method` so continuing our above example, a file would be generated at `pages/HomeController/HomePage.vue` and would be seen by navigating to `/`
+Phase follows some conventions in order to get all the routing to stay predictable. All Vue page components will be put in the `resources/js/pages` directory, and named as after the `controller/method` so continuing our above example, our home page would be found in `resources/js/pages/HomeController/HomePage.vue` and would be seen by navigating to `/`. If the route is added to `routes/web.php`, but the appropriate page component has not yet been created, Phase will generate a basic template page component for you at the correct location.
 
 > If `npm run watch` or `npm run hot` is running while adding routes to `web.php`, your .vue files will be generated if they don't already exist. but don't worry! If they do exists, they will not be modified, and if you remove a route, the file will not be deleted.
 
-### [#](#api-routes)API Routes
-...
+Dynamic routes can be used as usual, simply pass create the Phase route as if it where any other GET request, and the parameters will be passed into the controller as usual
 
-### [#](#middleware)Middleware
-Any middleware applied to the route server side, will be used and a front end middleware will be added to your route config. You may find this useful for specific behavior on certain routes in conjunction with vue routers [Global Before Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards)
+```php
+Route::phase('/posts/{post}', 'BlogController@SinglePostPage');
+```
+
+### [#](#api-routes)API Routes
+Api routes, are just regular laravel routes with the slight difference in the return value. For integration with the state management portion of Phase, api routes should `return response()->vuex()`. For more information on this, refer the the state management section.

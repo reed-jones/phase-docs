@@ -36,6 +36,11 @@ class Section extends Model
             'version_id' => 1,
             'slug' => 'server-side-rendering',
             'title' => 'Server Side Rendering'
+        ],
+        [
+            'version_id' => 1,
+            'slug' => 'api',
+            'title' => 'API'
         ]
     ];
 
