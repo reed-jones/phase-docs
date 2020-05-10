@@ -62,13 +62,24 @@
                 class="bg-gray-300 text-dark m-4 md:mx-16 md:my-12 w-full max-w-4xl rounded-lg shadow-2xl px-4 md:px-16 py-4 md:py-12 "
             >
                 <h2 class="text-2xl mb-2 mx-4 md:mx-0">Changelog</h2>
-                <div class="flex mb-2">
-                  <a href="https://www.npmjs.com/package/@phased/phase">
-                    <img class="mr-2" alt="npm (scoped)" src="https://img.shields.io/npm/v/@phased/phase">
+                <div class="flex items-stretch mb-2 h-6">
+
+                  <a href="https://www.npmjs.com/package/@phased/phase" class="shadow-md mr-2 h-full">
+                    <img class="h-full" alt="npm (scoped)" src="https://img.shields.io/npm/v/@phased/phase">
                   </a>
-                  <a href="https://packagist.org/packages/phased/phase">
-                    <img class="mr-2" alt="Packagist Version" src="https://img.shields.io/packagist/v/phased/phase?label=composer">
+
+                  <a href="https://packagist.org/packages/phased/phase" class="mr-2 h-full">
+                    <img class="shadow-md h-full" alt="Packagist Version" src="https://img.shields.io/packagist/v/phased/phase?label=composer">
                   </a>
+
+                  <!--
+                    TODO: this chipper tag is for the phase-docs repo, not the main phase repo as it should be
+                  -->
+                  <!--
+                  <div class="shadow-md mr-2 h-full">
+                    <img class="h-full" alt="Chipper CI" src="https://app.chipperci.com/projects/b4d6dffa-71a2-42f8-8ea2-6c6e86a5511e/status/master">
+                  </div>
+                  -->
                 </div>
                 <div class="changelog px-4 md:px-0" v-html="changelog" />
 

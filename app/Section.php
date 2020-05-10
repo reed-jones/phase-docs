@@ -46,7 +46,7 @@ class Section extends Model
 
     public function version()
     {
-        return $this->belongsTo('App\Version');
+        return $this->belongsTo(Version::class);
     }
 
     public function getContentAttribute()
