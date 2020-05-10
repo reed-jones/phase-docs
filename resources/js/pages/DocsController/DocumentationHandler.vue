@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-gray-100 flex items-start justify-start" :dusk="`docs/${$store.state.phase.docs.active.slug}`">
+    <div class="h-screen bg-gray-100 flex items-start justify-start overflow-y-scroll" :dusk="`docs/${$store.state.phase.docs.active.slug}`">
         <div
             class="w-1/3 flex-grow-0 flex-shrink-0 sticky top-0 text-right border-r-2 border-pink-550 min-h-screen shadow-2xl bg-blue-500 text-dark text-lg py-4"
         >
@@ -42,7 +42,7 @@
                 </RouterLink>
             </ul>
         </div>
-        <div class="documentation p-4 flex-1 w-full h-screen overflow-y-scroll">
+        <div class="documentation p-8 w-full flex-grow-1 flex-1 min-h-screen">
             <div v-html="content" />
             <a :href="editLink">Edit This Page</a>
         </div>

@@ -12,7 +12,10 @@ Vue.use(VueRouter)
 
 // Phase Routes & Vue Router Options
 import PhaseRoutes from '@phased/phase/routes'
-const routerOptions = { mode: 'history', routes: PhaseRoutes }
+const routerOptions = {
+    mode: 'history',
+    routes: PhaseRoutes
+}
 
 // Export Phase app for SSR
 export default new Vue({
