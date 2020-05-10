@@ -1,4 +1,4 @@
-*
-!docs/
+!master/**/*.md
 !public/
 !.gitignore
+ssr
