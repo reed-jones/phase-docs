@@ -1,4 +1,3 @@
-import 'prismjs';
 import axios from 'axios'
 
 if (typeof window !== 'undefined') {

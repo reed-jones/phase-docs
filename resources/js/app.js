@@ -10,11 +10,10 @@ import PhaseRoutes from '@phased/phase/routes'
 
 Vue.use(VueRouter)
 
+const routerOptions = { mode: 'history', routes: PhaseRoutes }
+
 export default new Vue({
     store,
-    router: new VueRouter({
-        mode: 'history',
-        routes: PhaseRoutes
-    }),
+    router: new VueRouter(routerOptions),
     render: h => h(App)
 })

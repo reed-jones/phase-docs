@@ -1,0 +1,13 @@
+# Advanced Configuration
+
+### [#](#laravel-mix)Laravel Mix
+...
+
+### [#](#webpack)Webpack
+...
+
+### [#](#ssr)SSR
+...
+
+### [#](#state-management)State Management
+...
