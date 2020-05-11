@@ -53,13 +53,13 @@ class Github extends ApiBuilder
 
     protected $guarded = [];
 
-    public function releases($repo)
+    protected function releases($repo)
     {
         return $this->get("repos/{$repo}/releases")
             ->prepare();
     }
 
-    public function repo($repo)
+    protected function repo($repo)
     {
         return $this->get("repos/{$repo}")
             ->prepare(fn ($data) => [$data]);
