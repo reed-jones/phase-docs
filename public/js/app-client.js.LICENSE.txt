@@ -10,6 +10,8 @@
  * Released under the MIT License.
  */
 
+/*! algoliasearch-lite.umd.js | 4.2.0 | © Algolia, inc. | https://github.com/algolia/algoliasearch-client-javascript */
+
 /**
  * vuex v3.3.0
  * (c) 2020 Evan You
