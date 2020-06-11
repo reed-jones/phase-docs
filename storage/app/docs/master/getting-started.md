@@ -6,7 +6,7 @@ Phase is modular by design, so each component can be installed individually, dep
 
 ```bash
 npm install @phased/phase
-composer require @phased/phase
+composer require phased/phase
 ```
 
 In addition, you will need to install Vue, Vuex (for state management), Vue Router (for SPA routing), and axios (for API requests) incase you have not done that yet
