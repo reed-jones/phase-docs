@@ -15,32 +15,32 @@ class Section extends Model
         [
             'version_id' => 1,
             'slug' => 'getting-started',
-            'title' => 'Getting Started'
+            'title' => 'Getting Started',
         ],
         [
             'version_id' => 1,
             'slug' => 'what-is-phase',
-            'title' => 'What Is Phase'
+            'title' => 'What Is Phase',
         ],
         [
             'version_id' => 1,
             'slug' => 'routing',
-            'title' => 'Routing'
+            'title' => 'Routing',
         ],
         [
             'version_id' => 1,
             'slug' => 'state-management',
-            'title' => 'State Management'
+            'title' => 'State Management',
         ],
         [
             'version_id' => 1,
             'slug' => 'server-side-rendering',
-            'title' => 'Server Side Rendering'
+            'title' => 'Server Side Rendering',
         ],
         [
             'version_id' => 1,
             'slug' => 'api',
-            'title' => 'API'
+            'title' => 'API',
         ],
     ];
 
@@ -51,11 +51,29 @@ class Section extends Model
 
     public function getContentAttribute()
     {
-        return $this->attributes['content'] = Storage::get("docs/{$this->version->branch}/{$this->slug}.md");
+        $path = "docs/{$this->version->branch}/{$this->slug}.md";
+        return $this->attributes['content'] = Storage::get($path);
     }
 
     public function hasContent()
     {
-        return Storage::exists("docs/{$this->version->branch}/{$this->slug}.md");
+        $path = "docs/{$this->version->branch}/{$this->slug}.md";
+        return Storage::exists($path);
+    }
+
+    protected function getSectionWithContent($version_id, $section_slug)
+    {
+        $section = Section::query()
+            ->where([
+                'version_id' => $version_id,
+                'slug' => $section_slug,
+            ])
+            ->firstOrFail();
+
+        if (! $section->hasContent()) {
+            abort(404);
+        }
+
+        return $section->append('content');
     }
 }

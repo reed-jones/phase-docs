@@ -21,33 +21,18 @@ class DocsController extends Controller
 
     public function DocumentationHandler($versionTag, $sectionSlug = null)
     {
-        // redirects from `/docs/getting-started` to `/docs/master/getting-started`
-        if (!$sectionSlug) {
-            return redirect("/docs/master/$versionTag");
+        // redirects from /getting-started to /master/getting-started
+        if (! $sectionSlug) {
+            return redirect("/docs/master/{$versionTag}");
         }
 
-        $version = Version::byTag($versionTag)->first();
+        $version = Version::byTag($versionTag)->firstOrFail();
 
-        if (!$version) {
-            return abort(404);
-        }
-
-        $section = Section::query()
-            ->where([
-                'version_id' => $version->id,
-                'slug' => $sectionSlug
-            ])
-            ->first();
-
-        if (!$section || !$section->hasContent()) {
-            return abort(404);
-        }
-
-        Vuex::module('phase/docs', [
-            'active' => $section->append('content'),
-            'sections' => Section::with('version')->get()->groupBy('version.branch'),
-            // 'sections' => Section::with('version')->get(),
-            'versions' => Version::all()
+        $section = Section::getSectionWithContent($version->id, $sectionSlug);
+        Vuex::load('phase/docs', [
+            'active' => $section,
+            'sections',
+            'versions',
         ]);
 
         return Phase::view();

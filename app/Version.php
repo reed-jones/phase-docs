@@ -10,8 +10,8 @@ class Version extends Model
 {
     use Vuexable, Sushi;
 
-    public $rows = [
-        [ 'id' => 1, 'branch' => 'master' ]
+    protected $rows = [
+        [ 'id' => 1, 'branch' => 'master' ],
     ];
 
     public function scopeByTag($query, $tag)
