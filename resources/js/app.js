@@ -17,6 +17,9 @@ const routerOptions = {
     routes: PhaseRoutes
 }
 
+import InstantSearch from 'vue-instantsearch';
+Vue.use(InstantSearch);
+
 // Export Phase app for SSR
 export default new Vue({
     store,

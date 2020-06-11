@@ -1,5 +1,6 @@
 <?php
 
+use App\Section;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ Route::phase(
     '/docs/{version}/{section?}',
     'DocsController@DocumentationHandler'
 );
+
+Route::get('/search', 'DocsController@SearchHandler');

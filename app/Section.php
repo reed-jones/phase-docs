@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Laravel\Scout\Searchable;
 use Phased\State\Traits\Vuexable;
 use Sushi\Sushi;
 
 class Section extends Model
 {
-    use Vuexable, Sushi;
+    use Vuexable, Sushi, Searchable;
 
     protected $rows = [
         [
@@ -75,5 +76,13 @@ class Section extends Model
         }
 
         return $section->append('content');
+    }
+
+    public function toSearchableArray()
+    {
+        return array_merge(
+            $this->toArray(),
+            ['content' => $this->content],
+        );
     }
 }

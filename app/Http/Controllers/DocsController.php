@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Apis\Github;
 use App\Section;
+use App\User;
 use App\Version;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Phased\Routing\Facades\Phase;
 use Phased\State\Facades\Vuex;
 
@@ -36,5 +39,10 @@ class DocsController extends Controller
         ]);
 
         return Phase::view();
+    }
+
+    public function SearchHandler(Request $request)
+    {
+        return Section::search($request->search)->get()->each->append('content');
     }
 }
