@@ -68,6 +68,6 @@
     },
     "vercel": [
         "npm install",
-        "npm  run prod"
+        "npm run prod"
     ]
 }
