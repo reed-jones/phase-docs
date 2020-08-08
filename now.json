@@ -6,6 +6,7 @@
       }
     },
     "routes": [
+      { "src": "/images/(.*)$", "dest": "public/images/.$1"},
       { "src": "/(css|js|fonts)/(.*)$", "dest": "/api/assets.php?type=$1&file=$2"},
       { "src": "/(.*)",  "dest": "/api/index.php" }
     ],
