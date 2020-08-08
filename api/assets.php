@@ -16,11 +16,7 @@ switch($_GET['type']) {
         echo require __DIR__ . '/../public/js/' . basename($_GET['file']);
         break;
     case 'fonts':
-        header('Content-Type: application/javascript; charset: UTF-8');
+        header('Content-Type: font/woff2;');
         echo require __DIR__ . '/../public/fonts/' . basename($_GET['file']);
-        break;
-    case 'images':
-        header('Content-Type: application/javascript; charset: UTF-8');
-        echo require __DIR__ . '/../public/images/' . basename($_GET['file']);
         break;
 }
