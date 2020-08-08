@@ -13,7 +13,6 @@ class DocsController extends Controller
     public function LandingPage()
     {
         Github::release('reed-jones/phase', 'latest')
-            ->first()
             ->toVuex('phase/releases', 'latest');
 
         return Phase::view();
