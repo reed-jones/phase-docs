@@ -23,7 +23,7 @@
     "dependencies": {
         "@phased/phase": "^0.4.0",
         "marked": "^0.8.0",
-        "prismjs": "^1.19.0",
+        "prismjs": "^1.21.0",
         "tailwindcss": "^1.2.0",
         "vue": "^2.6.11",
         "vue-prism-component": "^1.1.1",
