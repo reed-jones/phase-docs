@@ -56,6 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'use_live_changelog' => true,
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
