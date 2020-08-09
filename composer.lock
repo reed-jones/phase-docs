@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36fb770d456ef2c6e4fe23f5ae735c7a",
+    "content-hash": "dd9b2e0f42a89a53c8a8972b6001a78e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -404,16 +404,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.18",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "cfa3d44471c7f5bfb684ac2b0da7114283d78441"
+                "reference": "840d5603eb84cc81a6a0382adac3293e57c1c64c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/cfa3d44471c7f5bfb684ac2b0da7114283d78441",
-                "reference": "cfa3d44471c7f5bfb684ac2b0da7114283d78441",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/840d5603eb84cc81a6a0382adac3293e57c1c64c",
+                "reference": "840d5603eb84cc81a6a0382adac3293e57c1c64c",
                 "shasum": ""
             },
             "require": {
@@ -458,7 +458,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-06-16T20:11:17+00:00"
+            "time": "2020-08-08T21:28:19+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -1563,21 +1563,21 @@
         },
         {
             "name": "phased/phase",
-            "version": "v0.5.1",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-phase-php.git",
-                "reference": "684995a7448bb888bde6c39d25a8fbca66631986"
+                "reference": "0300a8e6d8a39bd3d50bad5569c73124de171f12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-phase-php/zipball/684995a7448bb888bde6c39d25a8fbca66631986",
-                "reference": "684995a7448bb888bde6c39d25a8fbca66631986",
+                "url": "https://api.github.com/repos/reed-jones/phase-phase-php/zipball/0300a8e6d8a39bd3d50bad5569c73124de171f12",
+                "reference": "0300a8e6d8a39bd3d50bad5569c73124de171f12",
                 "shasum": ""
             },
             "require": {
-                "phased/routing": "^0.5",
-                "phased/state": "^0.5",
+                "phased/routing": "self.version",
+                "phased/state": "self.version",
                 "php": "^7.2",
                 "spatie/laravel-server-side-rendering": "^1.4.1"
             },
@@ -1602,21 +1602,21 @@
                     "email": "reedjones@reedjones.com"
                 }
             ],
-            "description": "Phase meta package",
-            "time": "2020-08-04T02:24:04+00:00"
+            "description": "Automatic Vue<->Laravel SPA adapter",
+            "time": "2020-08-09T04:04:46+00:00"
         },
         {
             "name": "phased/routing",
-            "version": "v0.5.1",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-routing-php.git",
-                "reference": "4ac531420067549a02c76a16a26685f172de4703"
+                "reference": "c5bb8fc432119cba56cfc073db152f7a18a8b7c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-routing-php/zipball/4ac531420067549a02c76a16a26685f172de4703",
-                "reference": "4ac531420067549a02c76a16a26685f172de4703",
+                "url": "https://api.github.com/repos/reed-jones/phase-routing-php/zipball/c5bb8fc432119cba56cfc073db152f7a18a8b7c5",
+                "reference": "c5bb8fc432119cba56cfc073db152f7a18a8b7c5",
                 "shasum": ""
             },
             "require": {
@@ -1654,21 +1654,21 @@
                     "email": "reedjones@reedjones.com"
                 }
             ],
-            "description": "Transparent Vue <-> Laravel Integration",
-            "time": "2020-08-03T18:25:51+00:00"
+            "description": "Generates Vue Router configuration from your Laravel routes",
+            "time": "2020-08-09T03:35:55+00:00"
         },
         {
             "name": "phased/state",
-            "version": "v0.5.1",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-state-php.git",
-                "reference": "3a92c6fea551ec421ca4702a23b3bc84ee9416b1"
+                "reference": "3a595a912bf8f816dd28ced425cb05db35746b06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-state-php/zipball/3a92c6fea551ec421ca4702a23b3bc84ee9416b1",
-                "reference": "3a92c6fea551ec421ca4702a23b3bc84ee9416b1",
+                "url": "https://api.github.com/repos/reed-jones/phase-state-php/zipball/3a595a912bf8f816dd28ced425cb05db35746b06",
+                "reference": "3a595a912bf8f816dd28ced425cb05db35746b06",
                 "shasum": ""
             },
             "require": {
@@ -1707,7 +1707,7 @@
                 }
             ],
             "description": "Magic Data Loading. Laravel <-> Vuex Syncing",
-            "time": "2020-06-26T15:04:59+00:00"
+            "time": "2020-08-09T04:43:28+00:00"
         },
         {
             "name": "phpoption/phpoption",
