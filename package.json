@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "@phased/phase": "^0.6.0",
-        "marked": "^0.8.0",
+        "marked": "^4.0.10",
         "prismjs": "^1.21.0",
         "tailwindcss": "^1.6.2",
         "vue": "^2.6.11",
